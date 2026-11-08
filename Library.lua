@@ -935,6 +935,11 @@ local function MakeDraggable(dragHandle, targetFrame, scaleGetter, canDragFn, po
 
 	Library:GiveSignal(UserInputService.InputChanged:Connect(function(input)
 		if dragging and (input.UserInputType == Enum.UserInputType.MouseMovement or input == dragInput) then
+			if canDragFn and not canDragFn(input.Position) then
+				dragging = false
+				dragInput = nil
+				return
+			end
 			local delta = Vector2.new(input.Position.X, input.Position.Y) - dragStart
 			local cam = workspace.CurrentCamera
 			local vp = cam and cam.ViewportSize or Vector2.new(1920, 1080)
@@ -1177,7 +1182,7 @@ do
 	wmBrandRich.ZIndex = 504
 	wmBrandRich.Parent = wmRow
 
-	MakeDraggable(wmOuter1, wmOuter1, function() return 1 end)
+	MakeDraggable(wmOuter1, wmOuter1, function() return 1 end, function() return Library.Toggled end)
 
 	local wmFade = 0
 	local segmentPool = {}
@@ -1368,7 +1373,7 @@ do
 	kbRowsContainer.ZIndex = 494
 	kbRowsContainer.Parent = kbCanvas
 
-	MakeDraggable(kbOuter1, kbOuter1, function() return 1 end)
+	MakeDraggable(kbOuter1, kbOuter1, function() return 1 end, function() return Library.Toggled end)
 
 	Library.KeybindFrame = kbOuter1
 	Library.KeybindPickers = {}
@@ -6432,7 +6437,7 @@ function Library:CreateWindow(config)
 			return windowCtx.CurrentScale
 		end,
 		function(mousePos3)
-			if not windowCtx.TargetVisible then
+			if not windowCtx.TargetVisible or not Library.Toggled then
 				return false
 			end
 			for _, m in ipairs(windowCtx.Modals) do
@@ -6916,7 +6921,7 @@ function Library:CreateWindow(config)
 				Library:Toggle()
 			end
 		end)
-		MakeDraggable(mobInner, mobShell, function() return 1 end)
+		MakeDraggable(mobInner, mobShell, function() return 1 end, function() return Library.Toggled end)
 
 		Library:BindStep(function()
 			if mobShell.Parent then
