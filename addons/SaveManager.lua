@@ -80,6 +80,7 @@ do
 					idx = idx,
 					value = object.Value:ToHex(),
 					transparency = object.Transparency or 0,
+					rainbow = object.Rainbow == true,
 				}
 			end,
 			Load = function(idx, data)
@@ -88,6 +89,9 @@ do
 					local ok, col = pcall(Color3.fromHex, data.value)
 					if ok and col then
 						o:SetValueRGB(col, tonumber(data.transparency) or 0)
+					end
+					if o.SetRainbow then
+						o:SetRainbow(data.rainbow == true)
 					end
 				end
 			end,

@@ -553,13 +553,20 @@ do
 	})
 
 	local EntRight = SubEntPlayers:AddRightGroupbox("Player Actions", "sliders")
+	EntRight:AddDropdown("Ent_QuickPlayer", {
+		Text = "Quick Target (Live)",
+		SpecialType = "Player",
+		SearchPlaceholder = "Filter server players...",
+		Tooltip = "Auto-updating searchable player dropdown",
+	})
 	EntRight:AddButton("Refresh Player List", function()
 		local nn, ns = GetLivePlayerNames()
 		PlayerListBox:SetValues(nn, ns)
 		Library:Notify("Synced " .. tostring(#nn) .. " players", 2.5)
 	end)
 	EntRight:AddButton("Teleport to Player", function()
-		Library:Notify("Selected target: " .. tostring(Options.Ent_SelectedPlayer.Value), 2.5)
+		local chosen = Options.Ent_QuickPlayer.Value or Options.Ent_SelectedPlayer.Value
+		Library:Notify("Selected target: " .. tostring(chosen), 2.5)
 	end)
 	EntRight:AddToggle("Ent_Spectate", { Text = "Spectate Selected", Default = false })
 	EntRight:AddToggle("Ent_Whitelist", { Text = "Mark as Friendly", Default = false })
@@ -710,6 +717,7 @@ do
 	GeneralGroup:AddToggle("Set_Watermark", {
 		Text = "Show Watermark",
 		Default = true,
+		Tooltip = "Toggle the top-left telemetry bar",
 		Callback = function(val)
 			Library:SetWatermarkVisibility(val)
 		end,
@@ -718,8 +726,18 @@ do
 	GeneralGroup:AddToggle("Set_KeybindList", {
 		Text = "Show Keybind List",
 		Default = true,
+		Tooltip = "Toggle the live active keybinds panel",
 		Callback = function(val)
 			Library:SetKeybindListVisibility(val)
+		end,
+	})
+
+	GeneralGroup:AddToggle("Set_CustomCursor", {
+		Text = "Custom Cursor",
+		Default = true,
+		Tooltip = "Render accent triangle cursor while the menu is open",
+		Callback = function(val)
+			Library:SetCustomCursor(val)
 		end,
 	})
 
