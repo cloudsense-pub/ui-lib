@@ -174,10 +174,10 @@ do
 	HealthBox:AddSlider("HP_ArmorVal", { Text = "Armor", Default = 0.0, Min = 0.0, Max = 100.0, Rounding = 1 })
 	HealthBox:AddButton("Set Health", function()
 		Library:Notify("Applied Health: " .. tostring(Options.HP_HealthVal.Value), 2.5)
-	end)
+	end):AddTooltip("Apply the selected health value")
 	HealthBox:AddButton("Set Armor", function()
 		Library:Notify("Applied Armor: " .. tostring(Options.HP_ArmorVal.Value), 2.5)
-	end)
+	end):AddTooltip("Apply the selected armor value")
 
 	-- Subtab 2: Equipment
 	local EquipLeft = SubEquip:AddLeftGroupbox("Handling & Tuning", "sliders")
@@ -199,7 +199,7 @@ do
 	EquipLeft:AddSlider("Eq_AmmoCount", { Text = "Reserve Count", Default = 250, Min = 0, Max = 999, Rounding = 0 })
 	EquipLeft:AddButton("Apply Reserve", function()
 		Library:Notify("Updated reserve to " .. tostring(Options.Eq_AmmoCount.Value), 2.5)
-	end)
+	end):AddTooltip("Update reserve count to slider value")
 
 	local EquipRight = SubEquip:AddRightGroupbox("Loadout Selector", "box")
 	EquipRight:AddDropdown("Eq_Category", {
@@ -216,7 +216,7 @@ do
 	EquipRight:AddToggle("Eq_CustomTint", { Text = "Apply Accent Finish", Default = false })
 	EquipRight:AddButton("Equip Selected", function()
 		Library:Notify("Equipped " .. tostring(Options.Eq_ItemName.Value), 2.5)
-	end)
+	end):AddTooltip("Equip the selected model and attachment preset")
 
 	-- Subtab 3: Teleports
 	local TpLeft = SubTeleports:AddLeftGroupbox("Quick Teleports", "crosshair")
@@ -227,20 +227,20 @@ do
 	})
 	TpLeft:AddButton("Teleport to Destination", function()
 		Library:Notify("Teleporting to " .. tostring(Options.Tp_PresetLoc.Value), 2.5)
-	end)
+	end):AddTooltip("Move character to the selected preset destination")
 	TpLeft:AddButton("Teleport to Waypoint", function()
 		Library:Notify("Teleported to active waypoint", 2.5)
-	end)
+	end):AddTooltip("Move character to your active map waypoint")
 
 	local TpRight = SubTeleports:AddRightGroupbox("Location Manager", "dots")
 	TpRight:AddToggle("Tp_ShowSaved", { Text = "Show Saved Location", Default = false })
-	TpRight:AddInput("Tp_CustomName", { Text = "Bookmark Name", Placeholder = "Enter location label...", Icon = "tag" })
+	TpRight:AddInput("Tp_CustomName", { Text = "Bookmark Name", Placeholder = "Enter location label...", Icon = "tag", Tooltip = "Name for saving your current coordinates" })
 	TpRight:AddButton("Save Current Position", function()
 		Library:Notify("Saved position bookmark", 2.5)
-	end)
+	end):AddTooltip("Save your current coordinates under Bookmark Name")
 	TpRight:AddButton("Delete Selected Location", function()
 		Library:Notify("Removed selected bookmark", 2.5)
-	end)
+	end):AddTooltip("Delete the selected saved location")
 
 	-- Subtab 4: Strafe macro
 	local MacroLeft = SubMacro:AddLeftGroupbox("Strafe Configuration", "keyboard")
@@ -263,7 +263,7 @@ do
 	local MacroRight = SubMacro:AddRightGroupbox("Presets & Recording", "tag")
 	MacroRight:AddButton("Record Sequence (4 keys)", function()
 		Library:Notify("Listening for 4 movement keys...", 2.5)
-	end)
+	end):AddTooltip("Capture a custom 4-key movement sequence")
 	MacroRight:AddDropdown("Mac_SequencePreset", {
 		Text = "Quick Preset",
 		Values = { "W-A-S-D", "D-A-A-W", "A-D-A-D", "D-A-D-A", "W-D-S-A", "D-W-A-S", "W-A-W-D" },
@@ -271,7 +271,7 @@ do
 	})
 	MacroRight:AddButton("Apply Preset", function()
 		Library:Notify("Applied sequence: " .. tostring(Options.Mac_SequencePreset.Value), 2.5)
-	end)
+	end):AddTooltip("Load the selected movement preset")
 end
 
 -- ============================================================================
@@ -402,11 +402,11 @@ do
 	local HbRight = SubHitbox:AddRightGroupbox("Presets", "tag")
 	HbRight:AddButton("Open Quick Presets", function()
 		PresetsModal:Show()
-	end)
+	end):AddTooltip("Open preset sizing modal")
 	HbRight:AddButton("Reset Dimensions", function()
 		Options.Hb_Height:SetValue(0.13)
 		Options.Hb_Width:SetValue(0.13)
-	end)
+	end):AddTooltip("Restore default height and width (0.13)")
 end
 
 -- ============================================================================
@@ -494,14 +494,14 @@ do
 
 	VO_Right:AddButton("Add Object", function()
 		AddObjModal:Show()
-	end):AddButton("Remove", function()
+	end):AddTooltip("Add a new world object to track"):AddButton("Remove", function()
 		local cur = Options.Vis_TrackedObjList.Value
 		local idx = table.find(trackedObjects, cur)
 		if idx then
 			table.remove(trackedObjects, idx)
 			ObjList:SetValues(trackedObjects)
 		end
-	end)
+	end):AddTooltip("Remove the selected object from the tracked list")
 
 	-- World Visuals
 	local VW_Left = SubVWorld:AddLeftGroupbox("World & Trails", "globe")
@@ -563,11 +563,11 @@ do
 		local nn, ns = GetLivePlayerNames()
 		PlayerListBox:SetValues(nn, ns)
 		Library:Notify("Synced " .. tostring(#nn) .. " players", 2.5)
-	end)
+	end):AddTooltip("Refresh live server player roster")
 	EntRight:AddButton("Teleport to Player", function()
 		local chosen = Options.Ent_QuickPlayer.Value or Options.Ent_SelectedPlayer.Value
 		Library:Notify("Selected target: " .. tostring(chosen), 2.5)
-	end)
+	end):AddTooltip("Move to the currently selected player")
 	EntRight:AddToggle("Ent_Spectate", { Text = "Spectate Selected", Default = false })
 	EntRight:AddToggle("Ent_Whitelist", { Text = "Mark as Friendly", Default = false })
 
@@ -600,7 +600,7 @@ do
 	CVLeft:AddSlider("Veh_TorqueMult", { Text = "Torque Multiplier", Default = 1.0, Min = 1.0, Max = 5.0, Rounding = 1, Suffix = "x" })
 	CVLeft:AddButton("Repair Vehicle Now", function()
 		Library:Notify("Repaired current vehicle", 2.5)
-	end)
+	end):AddTooltip("Restore vehicle chassis and engine condition")
 
 	local SpLeft = SubSpawner:AddLeftGroupbox("Select Model", "car")
 	SpLeft:AddListBox("Veh_SpawnModel", {
@@ -614,7 +614,7 @@ do
 	SpRight:AddToggle("Veh_ClearPrev", { Text = "Replace Previous Vehicle", Default = false })
 	SpRight:AddButton("Spawn Selected Vehicle", function()
 		Library:Notify("Spawning " .. tostring(Options.Veh_SpawnModel.Value), 2.5)
-	end)
+	end):AddTooltip("Spawn the selected vehicle model in front of you")
 
 	local ModLeft = SubMods:AddLeftGroupbox("Appearance & Aero", "sliders")
 	ModLeft:AddLabel("Primary Paint"):AddColorPicker("Veh_Paint1", { Default = Color3.fromRGB(142, 134, 246), Title = "Primary Paint" })
@@ -639,6 +639,7 @@ do
 	EditorGroup:AddButton({
 		Text = "Execute Script",
 		Icon = "play",
+		Tooltip = "Compile and run the Luau code in the editor",
 		Func = function()
 			local src = CodeEd:GetText()
 			if type(loadstring) == "function" then
@@ -655,6 +656,7 @@ do
 	}):AddButton({
 		Text = "Clear Editor",
 		Icon = "trash",
+		Tooltip = "Clear all text from the script console",
 		Func = function()
 			CodeEd:SetValue("")
 		end,
@@ -683,20 +685,20 @@ do
 			ResList:SetStatus(sel, "started")
 			Library:Notify("Started " .. tostring(sel), 2.5)
 		end
-	end)
+	end):AddTooltip("Mark selected module as started")
 	ResRight:AddButton("Stop Module", function()
 		local sel = Options.Srv_SelectedResource.Value
 		if sel then
 			ResList:SetStatus(sel, "stopped")
 			Library:Notify("Stopped " .. tostring(sel), 2.5)
 		end
-	end)
+	end):AddTooltip("Stop selected module")
 
 	local InspLeft = SubInspector:AddLeftGroupbox("Hierarchy Filter", "folder")
-	InspLeft:AddInput("Srv_FilterQuery", { Text = "Path Filter", Placeholder = "ReplicatedStorage...", Icon = "search" })
+	InspLeft:AddInput("Srv_FilterQuery", { Text = "Path Filter", Placeholder = "ReplicatedStorage...", Icon = "search", Tooltip = "Filter instance hierarchy by path" })
 	InspLeft:AddButton("Scan Scripts", function()
 		Library:Notify("Scanned workspace hierarchy", 2.5)
-	end)
+	end):AddTooltip("Scan matching scripts in the hierarchy")
 end
 
 -- ============================================================================
@@ -753,13 +755,14 @@ do
 
 	GeneralGroup:AddButton("Unload Interface", function()
 		Library:Unload()
-	end)
+	end):AddTooltip("Disconnect all signals, restore cursor, and remove the UI")
 
 	local AssetGroup = Tabs.Settings:AddRightGroupbox("Assets & Theme", "sliders")
 	AssetGroup:AddDropdown("Set_ThemeMode", {
 		Text = "Color Scheme",
 		Values = { "Dark", "Light" },
 		Default = 1,
+		Tooltip = "Switch between Dark and Light color palettes",
 		Callback = function(mode)
 			Library:SetTheme(mode)
 		end,
@@ -769,6 +772,7 @@ do
 		Placeholder = "rbxassetid://...",
 		Icon = "tag",
 		Finished = true,
+		Tooltip = "Optional rbxassetid:// override for assets/icon_atlas.png",
 	})
 	AssetGroup:AddButton("Apply Uploaded Atlas", function()
 		local raw = tostring(Options.CustomAtlasInput.Value or "")
@@ -779,7 +783,7 @@ do
 			Library:SetIconAtlas(raw)
 			Library:Notify("Applied custom icon atlas: " .. raw, 3)
 		end
-	end)
+	end):AddTooltip("Apply the custom rbxassetid:// sprite sheet to all icons")
 end
 
 -- ============================================================================

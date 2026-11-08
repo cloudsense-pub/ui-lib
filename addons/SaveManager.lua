@@ -446,6 +446,7 @@ do
 			Text = "Config name",
 			Placeholder = "Enter config name...",
 			Icon = "tag",
+			Tooltip = "Name for a new configuration file",
 		})
 		section:AddButton("Create config", function()
 			local name = self.Library.Options.SaveManager_ConfigName.Value
@@ -455,7 +456,7 @@ do
 			end
 			self.Library:Notify(string.format("Created config %q", res))
 			self.Library.Options.SaveManager_ConfigList:SetValues(self:RefreshConfigList())
-		end)
+		end):AddTooltip("Create and save a new configuration file")
 
 		section:AddDivider()
 
@@ -463,6 +464,7 @@ do
 			Text = "Config list",
 			Values = self:RefreshConfigList(),
 			AllowNull = true,
+			Tooltip = "Select a saved configuration file",
 		})
 		section:AddButton("Load config", function()
 			local name = self.Library.Options.SaveManager_ConfigList.Value
@@ -471,14 +473,14 @@ do
 				return self.Library:Notify("Failed to load config: " .. tostring(err))
 			end
 			self.Library:Notify(string.format("Loaded config %q", name))
-		end):AddButton("Overwrite config", function()
+		end):AddTooltip("Load the selected configuration"):AddButton("Overwrite config", function()
 			local name = self.Library.Options.SaveManager_ConfigList.Value
 			local ok, err = self:Save(name)
 			if not ok then
 				return self.Library:Notify("Failed to overwrite: " .. tostring(err))
 			end
 			self.Library:Notify(string.format("Overwrote config %q", name))
-		end)
+		end):AddTooltip("Overwrite selected configuration with current settings")
 
 		section:AddButton("Delete config", function()
 			local name = self.Library.Options.SaveManager_ConfigList.Value
@@ -489,9 +491,9 @@ do
 			self.Library:Notify(string.format("Deleted config %q", name))
 			self.Library.Options.SaveManager_ConfigList:SetValues(self:RefreshConfigList())
 			self.Library.Options.SaveManager_ConfigList:SetValue(nil)
-		end):AddButton("Refresh list", function()
+		end):AddTooltip("Delete the selected configuration file"):AddButton("Refresh list", function()
 			self.Library.Options.SaveManager_ConfigList:SetValues(self:RefreshConfigList())
-		end)
+		end):AddTooltip("Rescan saved configurations from disk")
 
 		local autoLbl = section:AddLabel("Current autoload: " .. self:GetAutoloadConfig(), true)
 
@@ -503,11 +505,11 @@ do
 			end
 			autoLbl:SetText("Current autoload: " .. tostring(name))
 			self.Library:Notify(string.format("Set %q to auto load", name))
-		end):AddButton("Reset autoload", function()
+		end):AddTooltip("Automatically load selected configuration on startup"):AddButton("Reset autoload", function()
 			self:DeleteAutoLoadConfig()
 			autoLbl:SetText("Current autoload: none")
 			self.Library:Notify("Cleared autoload config")
-		end)
+		end):AddTooltip("Clear startup autoload configuration")
 
 		self:SetIgnoreIndexes({ "SaveManager_ConfigList", "SaveManager_ConfigName" })
 	end
@@ -567,6 +569,9 @@ do
 		searchInput.ClearTextOnFocus = false
 		searchInput.ZIndex = 11
 		searchInput.Parent = searchBox
+		if lib.AddTooltip then
+			lib:AddTooltip(searchBox, "Filter configurations by name")
+		end
 
 		-- Refresh & Import Clipboard Action Buttons (41x41 at x=413 and x=460)
 		local function MakeTopIconBtn(posX, iconName, tooltipTitle, onClick)
@@ -593,6 +598,9 @@ do
 			b.MouseEnter:Connect(function() hov = true end)
 			b.MouseLeave:Connect(function() hov = false end)
 			b.MouseButton1Click:Connect(onClick)
+			if lib.AddTooltip and type(tooltipTitle) == "string" and tooltipTitle ~= "" then
+				lib:AddTooltip(b, tooltipTitle)
+			end
 
 			lib:BindStep(function()
 				if b.Parent then
@@ -653,18 +661,22 @@ do
 			Compact = true,
 			Icon = "tag",
 			Placeholder = "Enter the name...",
+			Tooltip = "Enter a name for the new configuration",
 		})
 		local modalPrivToggle = createModal:AddToggle("EchoConfigModal_Private", {
 			Text = "Private Config",
 			Default = false,
+			Tooltip = "Mark configuration metadata as private",
 		})
 		local modalHideToggle = createModal:AddToggle("EchoConfigModal_HideUser", {
 			Text = "Hide Username",
 			Default = false,
+			Tooltip = "Hide your username on the configuration card",
 		})
 		createModal:AddButton({
 			Text = "Confirm",
 			Icon = "check",
+			Tooltip = "Save new configuration to disk",
 			Func = function()
 				local rawName = modalNameInput.Value
 				if not rawName or string.gsub(rawName, "%s+", "") == "" then
@@ -688,13 +700,16 @@ do
 		createBtn.MouseButton1Click:Connect(function()
 			createModal:Show()
 		end)
+		if lib.AddTooltip then
+			lib:AddTooltip(createBtn, "Create a new configuration")
+		end
 
-		MakeTopIconBtn(413, "refresh", "Refresh", function()
+		MakeTopIconBtn(413, "refresh", "Refresh configuration list", function()
 			RebuildGrid()
 			lib:Notify("Refreshed config list", 2.5)
 		end)
 
-		MakeTopIconBtn(461, "clipboard", "Import Clipboard", function()
+		MakeTopIconBtn(461, "clipboard", "Import configuration JSON from clipboard", function()
 			if type(getclipboard) == "function" then
 				local ok, clip = pcall(getclipboard)
 				if ok and type(clip) == "string" and #clip > 2 then
@@ -762,6 +777,10 @@ do
 
 					local editIcon = lib:CreateIcon(card, "edit", 11, lib.Theme.TextMuted, 12)
 					editIcon.Instance.Position = UDim2.fromOffset(164, 15)
+					if lib.AddTooltip then
+						lib:AddTooltip(nameBox, "Click to rename configuration (press Enter to save)")
+						lib:AddTooltip(editIcon.Instance, "Click title to rename configuration")
+					end
 
 					local underline = Instance.new("Frame")
 					underline.Position = UDim2.fromOffset(14, 33)
@@ -799,7 +818,7 @@ do
 					end)
 
 					-- Bottom-left small action buttons: Delete (trash), Copy JSON (clipboard), Overwrite (refresh), Autoload (shield)
-					local function AddSmallCardIcon(ix, icName, cb)
+					local function AddSmallCardIcon(ix, icName, tipText, cb)
 						local ib = Instance.new("TextButton")
 						ib.Position = UDim2.fromOffset(14 + (ix - 1) * 26, 70)
 						ib.Size = UDim2.fromOffset(22, 24)
@@ -817,15 +836,18 @@ do
 							ic:SetColor(lib.Theme.TextDim)
 						end)
 						ib.MouseButton1Click:Connect(cb)
+						if lib.AddTooltip and type(tipText) == "string" and tipText ~= "" then
+							lib:AddTooltip(ib, tipText)
+						end
 					end
 
-					AddSmallCardIcon(1, "trash", function()
+					AddSmallCardIcon(1, "trash", "Delete configuration", function()
 						self:Delete(cfgName)
 						lib:Notify(string.format("Deleted config %q", cfgName), 2.5)
 						RebuildGrid()
 					end)
 
-					AddSmallCardIcon(2, "clipboard", function()
+					AddSmallCardIcon(2, "clipboard", "Copy configuration JSON to clipboard", function()
 						local raw = self:ReadRaw(self:GetBasePath() .. "/" .. cfgName .. ".json")
 						if raw and type(setclipboard) == "function" then
 							pcall(setclipboard, raw)
@@ -835,13 +857,14 @@ do
 						end
 					end)
 
-					AddSmallCardIcon(3, "refresh", function()
+					AddSmallCardIcon(3, "refresh", "Overwrite configuration with current settings", function()
 						self:Save(cfgName)
 						RebuildGrid()
 						lib:Notify(string.format("Saved current state to %q", cfgName), 2.5)
 					end)
 
-					AddSmallCardIcon(4, "shield", function()
+					local isAuto = (autoName == cfgName)
+					AddSmallCardIcon(4, "shield", isAuto and "Disable startup autoload" or "Set as startup autoload", function()
 						if self:GetAutoloadConfig() == cfgName then
 							self:DeleteAutoLoadConfig()
 							lib:Notify("Cleared autoload", 2.5)
@@ -866,6 +889,9 @@ do
 
 					local loadIc = lib:CreateIcon(loadBtn, "play", 12, lib.Theme.ButtonText, 14)
 					loadIc.Instance.Position = UDim2.fromOffset(11, 7)
+					if lib.AddTooltip then
+						lib:AddTooltip(loadBtn, "Load configuration \"" .. tostring(cfgName) .. "\"")
+					end
 
 					loadBtn.MouseButton1Click:Connect(function()
 						local lok, err = self:Load(cfgName)
