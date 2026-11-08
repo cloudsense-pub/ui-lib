@@ -70,6 +70,7 @@ local IconUVs = {
 }
 
 local IconAliases = {
+	-- Core 40 ech0.fun glyph names
 	["logo"] = "logo",
 	["scan_eye"] = "uf010",
 	["heart"] = "uf02e",
@@ -110,6 +111,211 @@ local IconAliases = {
 	["box"] = "uf661",
 	["focus"] = "uf677",
 	["server"] = "uf6d6",
+
+	-- Extended Lucide / Feather / Fluent / FontAwesome aliases
+	["star"] = "logo",
+	["sparkle"] = "uf677",
+	["sparkles"] = "uf677",
+	["wand"] = "uf677",
+	["wand2"] = "uf677",
+	["effects"] = "uf677",
+	["fx"] = "uf677",
+	["zap"] = "uf677",
+	["bolt"] = "uf677",
+	["flash"] = "uf677",
+	["maximize"] = "uf677",
+	["expand"] = "uf677",
+	["corners"] = "uf677",
+	["frame"] = "uf677",
+	["aperture"] = "uf677",
+	["camera"] = "uf677",
+	["layers"] = "uf010",
+	["layer"] = "uf010",
+	["stack"] = "uf010",
+	["scan"] = "uf010",
+	["scanner"] = "uf010",
+	["chams"] = "uf010",
+	["occlusion"] = "uf010",
+	["xray"] = "uf010",
+	["ghost"] = "uf010",
+	["sensor"] = "uf010",
+	["viewfinder"] = "uf010",
+	["eye_off"] = "uf15e",
+	["vision"] = "uf15e",
+	["visual"] = "uf15e",
+	["visuals"] = "uf15e",
+	["view"] = "uf15e",
+	["sight"] = "uf15e",
+	["watch"] = "uf15e",
+	["preview"] = "uf15e",
+	["overlay"] = "uf15e",
+	["palette"] = "uf19a",
+	["color"] = "uf19a",
+	["colors"] = "uf19a",
+	["colour"] = "uf19a",
+	["paint"] = "uf19a",
+	["paintbrush"] = "uf19a",
+	["brush"] = "uf19a",
+	["droplet"] = "uf19a",
+	["swatch"] = "uf19a",
+	["swatches"] = "uf19a",
+	["elements"] = "uf19a",
+	["layout"] = "uf19a",
+	["columns"] = "uf19a",
+	["panels"] = "uf19a",
+	["widgets"] = "uf19a",
+	["apps"] = "uf19a",
+	["blocks"] = "uf19a",
+	["dashboard"] = "uf19a",
+	["home"] = "uf19a",
+	["window"] = "uf19a",
+	["theme"] = "uf19a",
+	["radar"] = "uf0fd",
+	["compass"] = "uf0fd",
+	["world"] = "uf0fd",
+	["earth"] = "uf0fd",
+	["map"] = "uf0fd",
+	["map_pin"] = "uf0fd",
+	["pin"] = "uf0fd",
+	["location"] = "uf0fd",
+	["navigation"] = "uf0fd",
+	["wifi"] = "uf0fd",
+	["radio"] = "uf0fd",
+	["signal"] = "uf0fd",
+	["broadcast"] = "uf0fd",
+	["sun"] = "uf0fd",
+	["moon"] = "uf0fd",
+	["cloud"] = "uf0fd",
+	["weather"] = "uf0fd",
+	["environment"] = "uf0fd",
+	["reticle"] = "uf044",
+	["crosshairs"] = "uf044",
+	["locate"] = "uf044",
+	["scope"] = "uf572",
+	["bullseye"] = "uf572",
+	["disc"] = "uf572",
+	["circle_dot"] = "uf572",
+	["swords"] = "uf07f",
+	["combat"] = "uf07f",
+	["blade"] = "uf07f",
+	["knife"] = "uf07f",
+	["person"] = "uf53b",
+	["player"] = "uf53b",
+	["profile"] = "uf53b",
+	["account"] = "uf53b",
+	["avatar"] = "uf53b",
+	["self"] = "uf53b",
+	["character"] = "uf53b",
+	["players"] = "uf040",
+	["team"] = "uf040",
+	["teams"] = "uf040",
+	["group"] = "uf040",
+	["friends"] = "uf040",
+	["user_cog"] = "uf571",
+	["user_check"] = "uf571",
+	["admin"] = "uf571",
+	["health"] = "uf02e",
+	["activity"] = "uf02e",
+	["pulse"] = "uf02e",
+	["heart_pulse"] = "uf02e",
+	["shield_check"] = "uf3b8",
+	["lock"] = "uf3b8",
+	["unlock"] = "uf3b8",
+	["security"] = "uf3b8",
+	["protection"] = "uf3b8",
+	["defense"] = "uf3b8",
+	["vehicle"] = "uf142",
+	["vehicles"] = "uf142",
+	["truck"] = "uf142",
+	["plane"] = "uf142",
+	["rocket"] = "uf142",
+	["wind"] = "uf142",
+	["gauge"] = "uf142",
+	["speed"] = "uf142",
+	["movement"] = "uf142",
+	["move"] = "uf142",
+	["footprints"] = "uf142",
+	["settings"] = "uf3dc",
+	["cog"] = "uf3dc",
+	["wrench"] = "uf3dc",
+	["tool"] = "uf3dc",
+	["tools"] = "uf3dc",
+	["hammer"] = "uf3dc",
+	["preferences"] = "uf3dc",
+	["sliders_horizontal"] = "uf407",
+	["tune"] = "uf407",
+	["tuning"] = "uf407",
+	["filter"] = "uf407",
+	["controls"] = "uf407",
+	["options"] = "uf407",
+	["adjust"] = "uf407",
+	["save"] = "uf045",
+	["config"] = "uf045",
+	["configs"] = "uf045",
+	["file"] = "uf045",
+	["files"] = "uf045",
+	["archive"] = "uf045",
+	["package"] = "uf661",
+	["cube"] = "uf661",
+	["briefcase"] = "uf661",
+	["inventory"] = "uf661",
+	["items"] = "uf661",
+	["chest"] = "uf661",
+	["terminal"] = "uf095",
+	["console"] = "uf095",
+	["script"] = "uf095",
+	["lua"] = "uf095",
+	["braces"] = "uf095",
+	["database"] = "uf6d6",
+	["cpu"] = "uf6d6",
+	["hard_drive"] = "uf6d6",
+	["logs"] = "uf6d6",
+	["file_text"] = "uf6d6",
+	["book_open"] = "uf3a5",
+	["docs"] = "uf3a5",
+	["info"] = "uf3a5",
+	["help"] = "uf3a5",
+	["bell"] = "uf4ca",
+	["bookmark"] = "uf4ca",
+	["label"] = "uf4ca",
+	["badge"] = "uf4ca",
+	["copy"] = "uf41c",
+	["paste"] = "uf41c",
+	["pencil"] = "uf18c",
+	["pen"] = "uf18c",
+	["rename"] = "uf18c",
+	["delete"] = "uf182",
+	["remove"] = "uf182",
+	["bin"] = "uf182",
+	["sync"] = "uf2cb",
+	["reload"] = "uf2cb",
+	["rotate"] = "uf2cb",
+	["rotate_cw"] = "uf2cb",
+	["rotate_ccw"] = "uf2cb",
+	["run"] = "uf254",
+	["start"] = "uf254",
+	["find"] = "uf5ae",
+	["magnifying_glass"] = "uf5ae",
+	["add"] = "uf317",
+	["x"] = "uf44f",
+	["cancel"] = "uf44f",
+	["tick"] = "uf313",
+	["menu"] = "uf58e",
+	["bars"] = "uf58e",
+	["align_justify"] = "uf58e",
+	["more"] = "uf0f0",
+	["more_horizontal"] = "uf0f0",
+	["ellipsis"] = "uf0f0",
+	["pointer"] = "uf05f",
+	["cursor"] = "uf05f",
+	["key"] = "uf450",
+	["keys"] = "uf450",
+	["binds"] = "uf450",
+	["keybinds"] = "uf450",
+	["chevron_down"] = "uf4fa",
+	["arrow_down"] = "uf4fa",
+	["link"] = "uf219",
+	["mail"] = "uf219",
 }
 
 local FallbackTextGlyphs = {
@@ -339,22 +545,187 @@ local function FormatKeyName(key)
 	return s
 end
 
-local function NormalizeIconKey(raw)
+local IconKeywordRules = {
+	{ "cham", "uf010" },
+	{ "occlu", "uf010" },
+	{ "layer", "uf010" },
+	{ "scan", "uf010" },
+	{ "xray", "uf010" },
+	{ "color", "uf19a" },
+	{ "colour", "uf19a" },
+	{ "palet", "uf19a" },
+	{ "swatch", "uf19a" },
+	{ "elem", "uf19a" },
+	{ "layout", "uf19a" },
+	{ "grid", "uf19a" },
+	{ "theme", "uf19a" },
+	{ "radar", "uf0fd" },
+	{ "compas", "uf0fd" },
+	{ "world", "uf0fd" },
+	{ "globe", "uf0fd" },
+	{ "envir", "uf0fd" },
+	{ "weath", "uf0fd" },
+	{ "telep", "uf0fd" },
+	{ "wayp", "uf0fd" },
+	{ "effect", "uf677" },
+	{ "spark", "uf677" },
+	{ "wand", "uf677" },
+	{ "focus", "uf677" },
+	{ "hitb", "uf677" },
+	{ "trac", "uf677" },
+	{ "partic", "uf677" },
+	{ "custom", "uf572" },
+	{ "target", "uf572" },
+	{ "scope", "uf572" },
+	{ "fov", "uf572" },
+	{ "cross", "uf044" },
+	{ "retic", "uf044" },
+	{ "precis", "uf044" },
+	{ "lock", "uf044" },
+	{ "comb", "uf07f" },
+	{ "sword", "uf07f" },
+	{ "melee", "uf07f" },
+	{ "vis", "uf15e" },
+	{ "eye", "uf15e" },
+	{ "overl", "uf15e" },
+	{ "sight", "uf15e" },
+	{ "spect", "uf15e" },
+	{ "team", "uf040" },
+	{ "friend", "uf040" },
+	{ "group", "uf040" },
+	{ "admin", "uf571" },
+	{ "user", "uf53b" },
+	{ "play", "uf53b" },
+	{ "char", "uf53b" },
+	{ "self", "uf53b" },
+	{ "local", "uf53b" },
+	{ "avat", "uf53b" },
+	{ "vehic", "uf142" },
+	{ "car", "uf142" },
+	{ "move", "uf142" },
+	{ "speed", "uf142" },
+	{ "strafe", "uf142" },
+	{ "flight", "uf142" },
+	{ "heart", "uf02e" },
+	{ "heal", "uf02e" },
+	{ "vital", "uf02e" },
+	{ "shield", "uf3b8" },
+	{ "prot", "uf3b8" },
+	{ "defen", "uf3b8" },
+	{ "safe", "uf3b8" },
+	{ "conf", "uf045" },
+	{ "save", "uf045" },
+	{ "fold", "uf045" },
+	{ "prof", "uf045" },
+	{ "sett", "uf3dc" },
+	{ "gear", "uf3dc" },
+	{ "cog", "uf3dc" },
+	{ "wren", "uf3dc" },
+	{ "slid", "uf407" },
+	{ "tune", "uf407" },
+	{ "tuni", "uf407" },
+	{ "smooth", "uf407" },
+	{ "filt", "uf407" },
+	{ "key", "uf450" },
+	{ "bind", "uf450" },
+	{ "macro", "uf450" },
+	{ "mous", "uf05f" },
+	{ "curs", "uf05f" },
+	{ "input", "uf05f" },
+	{ "code", "uf095" },
+	{ "lua", "uf095" },
+	{ "scrip", "uf095" },
+	{ "term", "uf095" },
+	{ "serv", "uf6d6" },
+	{ "log", "uf6d6" },
+	{ "data", "uf6d6" },
+	{ "box", "uf661" },
+	{ "item", "uf661" },
+	{ "inven", "uf661" },
+	{ "loot", "uf661" },
+	{ "list", "uf58e" },
+	{ "misc", "uf58e" },
+	{ "gener", "uf58e" },
+	{ "main", "uf58e" },
+	{ "search", "uf5ae" },
+	{ "find", "uf5ae" },
+	{ "book", "uf3a5" },
+	{ "info", "uf3a5" },
+	{ "doc", "uf3a5" },
+	{ "clip", "uf41c" },
+	{ "copy", "uf41c" },
+	{ "edit", "uf18c" },
+	{ "trash", "uf182" },
+	{ "del", "uf182" },
+	{ "refr", "uf2cb" },
+	{ "sync", "uf2cb" },
+}
+
+local function ExtractDirectImageUri(raw)
+	if type(raw) == "number" and raw >= 1000 then
+		return "rbxassetid://" .. tostring(math.floor(raw))
+	end
+	if type(raw) ~= "string" or #raw == 0 then
+		return nil
+	end
+	local trimmed = string.match(raw, "^%s*(.-)%s*$") or raw
+	local lower = string.lower(trimmed)
+	if string.sub(lower, 1, 13) == "rbxassetid://"
+		or string.sub(lower, 1, 11) == "rbxasset://"
+		or string.sub(lower, 1, 11) == "rbxthumb://"
+		or string.sub(lower, 1, 7) == "http://"
+		or string.sub(lower, 1, 8) == "https://"
+	then
+		return trimmed
+	end
+	if string.match(trimmed, "^%d%d%d%d+$") then
+		return "rbxassetid://" .. trimmed
+	end
+	return nil
+end
+
+local function MatchIconKeywords(str)
+	if type(str) ~= "string" or #str == 0 then
+		return nil
+	end
+	local lower = string.lower(str)
+	for _, rule in ipairs(IconKeywordRules) do
+		if string.find(lower, rule[1], 1, true) then
+			return rule[2]
+		end
+	end
+	return nil
+end
+
+local function NormalizeIconKey(raw, strictOnly)
 	if not raw or raw == "" then
 		return nil
 	end
 	if IconUVs[raw] then
 		return raw
 	end
-	local lower = string.lower(tostring(raw))
+	local s = tostring(raw)
+	if ExtractDirectImageUri(raw) then
+		return nil
+	end
+	local lower = string.lower(string.match(s, "^%s*(.-)%s*$") or s)
 	if IconUVs[lower] then
 		return lower
 	end
 	if IconAliases[lower] then
 		return IconAliases[lower]
 	end
+	-- Strip common icon pack prefixes ("lucide-", "fa-", "fas-", "far-", "mdi-", "icon-") and normalize separators
+	local stripped = string.gsub(lower, "^[a-z]+[:%-_]", "")
+	local underscored = string.gsub(lower, "[%-%s%.]+", "_")
+	local strippedUnder = string.gsub(stripped, "[%-%s%.]+", "_")
+	if IconUVs[stripped] then return stripped end
+	if IconAliases[underscored] then return IconAliases[underscored] end
+	if IconAliases[stripped] then return IconAliases[stripped] end
+	if IconAliases[strippedUnder] then return IconAliases[strippedUnder] end
+
 	if utf8 and utf8.codepoint then
-		local ok, cp = pcall(utf8.codepoint, tostring(raw), 1)
+		local ok, cp = pcall(utf8.codepoint, s, 1)
 		if ok and cp and cp >= 0xF000 then
 			local key = string.format("u%04x", cp)
 			if IconUVs[key] then
@@ -362,7 +733,33 @@ local function NormalizeIconKey(raw)
 			end
 		end
 	end
-	return nil
+	local kw = MatchIconKeywords(lower)
+	if kw then
+		return kw
+	end
+	if strictOnly then
+		return nil
+	end
+	return "uf677"
+end
+
+local function ResolveSmartIcon(rawIcon, titleHint, defaultKey)
+	if rawIcon ~= nil and rawIcon ~= "" then
+		if ExtractDirectImageUri(rawIcon) then
+			return rawIcon
+		end
+		local exact = NormalizeIconKey(rawIcon, true)
+		if exact then
+			return exact
+		end
+	end
+	if type(titleHint) == "string" and #titleHint > 0 then
+		local hinted = NormalizeIconKey(titleHint, true)
+		if hinted then
+			return hinted
+		end
+	end
+	return defaultKey or "uf677"
 end
 
 local Themes = {
@@ -828,11 +1225,12 @@ local function PopulateProceduralIcon(vecHolder, key, col, alpha, z, sizePx)
 end
 
 function Library:CreateIcon(parent, iconId, sizePx, color3, zIndex)
-	local key = NormalizeIconKey(iconId)
+	local directUri = ExtractDirectImageUri(iconId)
+	local key = (not directUri) and NormalizeIconKey(iconId) or nil
 	local uv = key and IconUVs[key] or nil
 	local initColor = color3 or self.Theme.TextPrimary
 	local holder = Instance.new("Frame")
-	holder.Name = "Icon_" .. tostring(key or "none")
+	holder.Name = "Icon_" .. tostring(key or (directUri and "custom") or "none")
 	holder.BackgroundTransparency = 1
 	holder.Size = UDim2.fromOffset(sizePx, sizePx)
 	holder.ZIndex = zIndex or 2
@@ -849,6 +1247,9 @@ function Library:CreateIcon(parent, iconId, sizePx, color3, zIndex)
 	if uv then
 		img.ImageRectOffset = Vector2.new(uv[1], uv[2])
 		img.ImageRectSize = Vector2.new(uv[3], uv[4])
+	else
+		img.ImageRectOffset = Vector2.zero
+		img.ImageRectSize = Vector2.zero
 	end
 	img.Parent = holder
 
@@ -872,23 +1273,38 @@ function Library:CreateIcon(parent, iconId, sizePx, color3, zIndex)
 		end
 	end
 
-	local function IsSpriteReady(asset)
-		return uv ~= nil
-			and type(asset) == "string"
-			and #asset > 0
-			and (IsLocalDirectAsset(asset) or img.IsLoaded)
+	local function GetEffectiveAsset(atlasAsset)
+		if directUri then
+			return directUri, true
+		end
+		if uv ~= nil and type(atlasAsset) == "string" and #atlasAsset > 0 then
+			return atlasAsset, false
+		end
+		return nil, false
 	end
 
-	local function SyncAsset(asset)
-		local hasAsset = (uv ~= nil and type(asset) == "string" and #asset > 0)
-		if not hasAsset then
+	local function IsSpriteReady(atlasAsset)
+		local effAsset = GetEffectiveAsset(atlasAsset)
+		return effAsset ~= nil and (IsLocalDirectAsset(effAsset) or img.IsLoaded)
+	end
+
+	local function SyncAsset(atlasAsset)
+		local effAsset, isCustomDirect = GetEffectiveAsset(atlasAsset)
+		if not effAsset then
 			EnsureFallbackPopulated()
 			img.Visible = false
 			vecHolder.Visible = true
 			return
 		end
-		img.Image = asset
-		if IsLocalDirectAsset(asset) or img.IsLoaded then
+		if isCustomDirect then
+			img.ImageRectOffset = Vector2.zero
+			img.ImageRectSize = Vector2.zero
+		elseif uv then
+			img.ImageRectOffset = Vector2.new(uv[1], uv[2])
+			img.ImageRectSize = Vector2.new(uv[3], uv[4])
+		end
+		img.Image = effAsset
+		if IsLocalDirectAsset(effAsset) or img.IsLoaded then
 			img.Visible = true
 			img.ImageTransparency = currentAlpha
 			vecHolder.Visible = false
@@ -931,15 +1347,12 @@ function Library:CreateIcon(parent, iconId, sizePx, color3, zIndex)
 			end
 		end,
 		SetIcon = function(_, newIcon)
-			local nk = NormalizeIconKey(newIcon)
+			directUri = ExtractDirectImageUri(newIcon)
+			local nk = (not directUri) and NormalizeIconKey(newIcon) or nil
 			local nuv = nk and IconUVs[nk] or nil
 			key = nk
 			uv = nuv
 			fallbackBuiltKey = false
-			if nuv then
-				img.ImageRectOffset = Vector2.new(nuv[1], nuv[2])
-				img.ImageRectSize = Vector2.new(nuv[3], nuv[4])
-			end
 			SyncAsset(self.IconAtlasId)
 		end,
 		UpdateAsset = SyncAsset,
@@ -5587,7 +6000,8 @@ local function CreateGroupboxObject(parentColumn, windowCtx, titleText, iconName
 	local hasIcon = (iconName ~= nil and iconName ~= "")
 	local headerIcon = nil
 	if hasIcon then
-		headerIcon = Library:CreateIcon(box, iconName, 13, Library.Theme.Accent, 11)
+		local resolvedGroupIcon = ResolveSmartIcon(iconName, titleText, "uf677")
+		headerIcon = Library:CreateIcon(box, resolvedGroupIcon, 13, Library.Theme.Accent, 11)
 		headerIcon.Instance.Position = UDim2.fromOffset(21, 15)
 	end
 
@@ -5599,6 +6013,7 @@ local function CreateGroupboxObject(parentColumn, windowCtx, titleText, iconName
 	headerTitle.FontFace = FontBold
 	headerTitle.TextSize = 13
 	headerTitle.TextXAlignment = Enum.TextXAlignment.Left
+	headerTitle.TextTruncate = Enum.TextTruncate.AtEnd
 	headerTitle.TextColor3 = Library.Theme.TextPrimary
 	headerTitle.Text = tostring(titleText or "Group")
 	headerTitle.ZIndex = 11
@@ -5948,13 +6363,20 @@ function Library:CreateWindow(config)
 	local titleWhiteStr = config.TitleWhite or "ech0."
 	local titleAccentStr = config.TitleAccent or "fun"
 	if config.Title and not config.TitleWhite and not config.TitleAccent then
-		local dotPos = string.find(config.Title, "%.")
+		local rawTitle = tostring(config.Title)
+		local dotPos = string.find(rawTitle, "%.")
 		if dotPos then
-			titleWhiteStr = string.sub(config.Title, 1, dotPos)
-			titleAccentStr = string.sub(config.Title, dotPos + 1)
+			titleWhiteStr = string.sub(rawTitle, 1, dotPos)
+			titleAccentStr = string.sub(rawTitle, dotPos + 1)
 		else
-			titleWhiteStr = config.Title
-			titleAccentStr = ""
+			local prefixSpace, lastWord = string.match(rawTitle, "^(.-%s+)(%S+)$")
+			if prefixSpace and lastWord then
+				titleWhiteStr = prefixSpace
+				titleAccentStr = lastWord
+			else
+				titleWhiteStr = rawTitle
+				titleAccentStr = ""
+			end
 		end
 	end
 
@@ -6047,27 +6469,37 @@ function Library:CreateWindow(config)
 	modalLayer.ZIndex = 400
 	modalLayer.Parent = root
 
-	-- Brand Logo + "ech0." + "fun" + First Divider Bar (x = 117, y = 28 in root -> 113, 24 in canvas)
-	local firstBar = Instance.new("Frame")
-	firstBar.Position = UDim2.fromOffset(113, 24)
-	firstBar.Size = UDim2.fromOffset(1, 8)
-	firstBar.BorderSizePixel = 0
-	firstBar.BackgroundColor3 = self.Theme.TopDivider
-	firstBar.ZIndex = 5
-	firstBar.Parent = canvas
+	-- Brand Logo + Dynamic Brand Title + First Divider Bar (auto-flows cleanly for any Title length!)
+	local plainBrandStr = titleWhiteStr .. titleAccentStr
+	local brandFontSize = 14
+	local approxBrandW = CalcTextBounds(plainBrandStr, FontBold, 14).X
+	if approxBrandW > 148 then
+		brandFontSize = 12
+		approxBrandW = math.min(156, CalcTextBounds(plainBrandStr, FontBold, 12).X)
+	elseif approxBrandW > 120 then
+		brandFontSize = 13
+		approxBrandW = CalcTextBounds(plainBrandStr, FontBold, 13).X
+	end
+	local initBrandLogoX = (approxBrandW <= 65)
+		and math.max(16, math.floor(105 - approxBrandW - 22 + 0.5))
+		or 16
+	local initBrandTextX = initBrandLogoX + 22
+	local initBrandLabelW = math.min(156, math.ceil(approxBrandW) + 4)
 
-	local approxBrandW = CalcTextBounds(titleWhiteStr .. titleAccentStr, FontBold, 14).X
+	local brandLogo = self:CreateIcon(canvas, "logo", 16, self.Theme.Accent, 5)
+	brandLogo.Instance.Position = UDim2.fromOffset(initBrandLogoX, 18)
+
 	local brandRich = Instance.new("TextLabel")
 	brandRich.Name = "BrandTitle"
 	brandRich.BackgroundTransparency = 1
-	brandRich.AnchorPoint = Vector2.new(1, 0)
-	brandRich.Position = UDim2.fromOffset(105, 18)
-	brandRich.AutomaticSize = Enum.AutomaticSize.X
-	brandRich.Size = UDim2.fromOffset(0, 16)
+	brandRich.AnchorPoint = Vector2.new(0, 0)
+	brandRich.Position = UDim2.fromOffset(initBrandTextX, 18)
+	brandRich.Size = UDim2.fromOffset(initBrandLabelW, 16)
 	brandRich.FontFace = FontBold
-	brandRich.TextSize = 14
+	brandRich.TextSize = brandFontSize
 	brandRich.RichText = true
-	brandRich.TextXAlignment = Enum.TextXAlignment.Right
+	brandRich.TextXAlignment = Enum.TextXAlignment.Left
+	brandRich.TextTruncate = Enum.TextTruncate.AtEnd
 	brandRich.TextColor3 = self.Theme.TextPrimary
 	brandRich.Text = string.format(
 		'%s<font color="#%s">%s</font>',
@@ -6078,41 +6510,140 @@ function Library:CreateWindow(config)
 	brandRich.ZIndex = 5
 	brandRich.Parent = canvas
 
-	local brandLogo = self:CreateIcon(canvas, "logo", 16, self.Theme.Accent, 5)
-	brandLogo.Instance.Position = UDim2.fromOffset(math.max(12, 105 - approxBrandW - 22), 18)
+	local initFirstBarX = math.max(113, math.floor(initBrandTextX + approxBrandW + 10 + 0.5))
+	local firstBar = Instance.new("Frame")
+	firstBar.Position = UDim2.fromOffset(initFirstBarX, 24)
+	firstBar.Size = UDim2.fromOffset(1, 8)
+	firstBar.BorderSizePixel = 0
+	firstBar.BackgroundColor3 = self.Theme.TopDivider
+	firstBar.ZIndex = 5
+	firstBar.Parent = canvas
 
-	-- Active Main Tab Topbar Indicator (x = 134, y = 22 in root -> 130, 18 in canvas)
+	-- Active Main Tab Topbar Indicator (flows dynamically right after firstBar)
 	local topTabIcon = self:CreateIcon(canvas, "user", 16, self.Theme.Accent, 5)
-	topTabIcon.Instance.Position = UDim2.fromOffset(130, 18)
+	topTabIcon.Instance.Position = UDim2.fromOffset(initFirstBarX + 16, 18)
 
 	local topTabTitle = Instance.new("TextLabel")
 	topTabTitle.BackgroundTransparency = 1
-	topTabTitle.Position = UDim2.fromOffset(150, 18)
+	topTabTitle.Position = UDim2.fromOffset(initFirstBarX + 36, 18)
 	topTabTitle.Size = UDim2.fromOffset(90, 16)
 	topTabTitle.FontFace = FontBold
 	topTabTitle.TextSize = 14
 	topTabTitle.TextXAlignment = Enum.TextXAlignment.Left
+	topTabTitle.TextTruncate = Enum.TextTruncate.AtEnd
 	topTabTitle.TextColor3 = self.Theme.TextPrimary
 	topTabTitle.Text = ""
 	topTabTitle.ZIndex = 5
 	topTabTitle.Parent = canvas
 
 	local secondBar = Instance.new("Frame")
-	secondBar.Position = UDim2.fromOffset(200, 24)
+	secondBar.Position = UDim2.fromOffset(initFirstBarX + 96, 24)
 	secondBar.Size = UDim2.fromOffset(1, 8)
 	secondBar.BorderSizePixel = 0
 	secondBar.BackgroundColor3 = self.Theme.TopDivider
 	secondBar.ZIndex = 5
 	secondBar.Parent = canvas
 
+	-- Clipped & Auto-Scrollable Horizontal Subtab Bar (wheel + drag/swipe + gradient edge chevrons + auto-center)
 	local subtabBarHolder = Instance.new("Frame")
+	subtabBarHolder.Name = "SubtabBarHolder"
 	subtabBarHolder.BackgroundTransparency = 1
 	subtabBarHolder.Position = UDim2.fromOffset(224, 12)
 	subtabBarHolder.Size = UDim2.fromOffset(466, 30)
-	subtabBarHolder.ZIndex = 5
+	subtabBarHolder.Active = false
+	subtabBarHolder.ZIndex = 6
 	subtabBarHolder.Parent = canvas
 
-	-- Left Sidebar Container (icons + tooltips)
+	local subtabClip = Instance.new("Frame")
+	subtabClip.Name = "SubtabClip"
+	subtabClip.Size = UDim2.fromScale(1, 1)
+	subtabClip.BackgroundTransparency = 1
+	subtabClip.ClipsDescendants = true
+	subtabClip.ZIndex = 6
+	subtabClip.Parent = subtabBarHolder
+
+	local subtabTrack = Instance.new("Frame")
+	subtabTrack.Name = "SubtabTrack"
+	subtabTrack.Position = UDim2.fromOffset(0, 0)
+	subtabTrack.Size = UDim2.fromOffset(0, 30)
+	subtabTrack.BackgroundTransparency = 1
+	subtabTrack.ZIndex = 6
+	subtabTrack.Parent = subtabClip
+
+	-- Subtle 2px Accent Scroll Thumb (fades in only when hovering/scrolling an overflowing subtab bar)
+	local subScrollRail = Instance.new("Frame")
+	subScrollRail.Name = "SubScrollRail"
+	subScrollRail.Position = UDim2.new(0, 2, 1, -1)
+	subScrollRail.Size = UDim2.new(1, -4, 0, 2)
+	subScrollRail.BackgroundColor3 = self.Theme.ControlBg
+	subScrollRail.BackgroundTransparency = 1
+	subScrollRail.BorderSizePixel = 0
+	subScrollRail.Visible = false
+	subScrollRail.ZIndex = 11
+	subScrollRail.Parent = subtabBarHolder
+	Instance.new("UICorner", subScrollRail).CornerRadius = UDim.new(1, 0)
+
+	local subScrollThumb = Instance.new("Frame")
+	subScrollThumb.Name = "Thumb"
+	subScrollThumb.Size = UDim2.fromOffset(36, 2)
+	subScrollThumb.BackgroundColor3 = self.Theme.Accent
+	subScrollThumb.BackgroundTransparency = 1
+	subScrollThumb.BorderSizePixel = 0
+	subScrollThumb.ZIndex = 12
+	subScrollThumb.Parent = subScrollRail
+	Instance.new("UICorner", subScrollThumb).CornerRadius = UDim.new(1, 0)
+
+	-- Left & Right Gradient Fade Caps + Step Chevrons (visible ONLY when subtabs overflow in that direction)
+	local subLeftCap = Instance.new("TextButton")
+	subLeftCap.Name = "ScrollLeftCap"
+	subLeftCap.Position = UDim2.fromOffset(0, 0)
+	subLeftCap.Size = UDim2.fromOffset(26, 30)
+	subLeftCap.BackgroundColor3 = self.Theme.Canvas
+	subLeftCap.BorderSizePixel = 0
+	subLeftCap.AutoButtonColor = false
+	subLeftCap.Text = ""
+	subLeftCap.Visible = false
+	subLeftCap.ZIndex = 13
+	subLeftCap.Parent = subtabBarHolder
+
+	local subLeftGrad = Instance.new("UIGradient")
+	subLeftGrad.Transparency = NumberSequence.new({
+		NumberSequenceKeypoint.new(0, 0),
+		NumberSequenceKeypoint.new(0.58, 0.08),
+		NumberSequenceKeypoint.new(1, 1),
+	})
+	subLeftGrad.Parent = subLeftCap
+
+	local subLeftIcon = self:CreateIcon(subLeftCap, "chevron_sm", 11, self.Theme.TextDim, 14)
+	subLeftIcon.Instance.Position = UDim2.fromOffset(2, 9)
+	subLeftIcon.Instance.Rotation = 90
+
+	local subRightCap = Instance.new("TextButton")
+	subRightCap.Name = "ScrollRightCap"
+	subRightCap.AnchorPoint = Vector2.new(1, 0)
+	subRightCap.Position = UDim2.new(1, 0, 0, 0)
+	subRightCap.Size = UDim2.fromOffset(26, 30)
+	subRightCap.BackgroundColor3 = self.Theme.Canvas
+	subRightCap.BorderSizePixel = 0
+	subRightCap.AutoButtonColor = false
+	subRightCap.Text = ""
+	subRightCap.Visible = false
+	subRightCap.ZIndex = 13
+	subRightCap.Parent = subtabBarHolder
+
+	local subRightGrad = Instance.new("UIGradient")
+	subRightGrad.Transparency = NumberSequence.new({
+		NumberSequenceKeypoint.new(0, 1),
+		NumberSequenceKeypoint.new(0.42, 0.08),
+		NumberSequenceKeypoint.new(1, 0),
+	})
+	subRightGrad.Parent = subRightCap
+
+	local subRightIcon = self:CreateIcon(subRightCap, "chevron_sm", 11, self.Theme.TextDim, 14)
+	subRightIcon.Instance.Position = UDim2.fromOffset(13, 9)
+	subRightIcon.Instance.Rotation = -90
+
+	-- Left Sidebar Container + Auto-Scrollable Tab Track (above Avatar & Bottom Gear)
 	local sidebarHolder = Instance.new("Frame")
 	sidebarHolder.Name = "Sidebar"
 	sidebarHolder.Position = UDim2.fromOffset(0, 0)
@@ -6120,6 +6651,22 @@ function Library:CreateWindow(config)
 	sidebarHolder.BackgroundTransparency = 1
 	sidebarHolder.ZIndex = 6
 	sidebarHolder.Parent = canvas
+
+	local sidebarTabsClip = Instance.new("Frame")
+	sidebarTabsClip.Name = "SidebarTabsClip"
+	sidebarTabsClip.Position = UDim2.fromOffset(0, 50)
+	sidebarTabsClip.Size = UDim2.fromOffset(62, 412)
+	sidebarTabsClip.BackgroundTransparency = 1
+	sidebarTabsClip.ClipsDescendants = true
+	sidebarTabsClip.ZIndex = 6
+	sidebarTabsClip.Parent = sidebarHolder
+
+	local sidebarTabsTrack = Instance.new("Frame")
+	sidebarTabsTrack.Name = "SidebarTabsTrack"
+	sidebarTabsTrack.Size = UDim2.fromOffset(62, 412)
+	sidebarTabsTrack.BackgroundTransparency = 1
+	sidebarTabsTrack.ZIndex = 6
+	sidebarTabsTrack.Parent = sidebarTabsClip
 
 	-- Player Roblox Avatar at (23, 476) in root -> (19, 472) in canvas, 24x24 rounded circle!
 	local pfpFrame = Instance.new("ImageLabel")
@@ -6630,6 +7177,20 @@ function Library:CreateWindow(config)
 			if mp.X >= cpPos.X and mp.X <= cpPos.X + cpSize.X and mp.Y >= cpPos.Y and mp.Y <= cpPos.Y + cpSize.Y then
 				return false
 			end
+			if windowCtx.SubtabBarIsOverflowing then
+				local sbPos = subtabBarHolder.AbsolutePosition
+				local sbSize = subtabBarHolder.AbsoluteSize
+				if mp.X >= sbPos.X and mp.X <= sbPos.X + sbSize.X and mp.Y >= sbPos.Y and mp.Y <= sbPos.Y + sbSize.Y then
+					return false
+				end
+			end
+			if windowCtx.SidebarIsOverflowing then
+				local sdPos = sidebarTabsClip.AbsolutePosition
+				local sdSize = sidebarTabsClip.AbsoluteSize
+				if mp.X >= sdPos.X and mp.X <= sdPos.X + sdSize.X and mp.Y >= sdPos.Y and mp.Y <= sdPos.Y + sdSize.Y then
+					return false
+				end
+			end
 			return true
 		end,
 		function()
@@ -6794,6 +7355,96 @@ function Library:CreateWindow(config)
 	-- ------------------------------------------------------------------------
 	-- AddTab & AddSubTab (1:1 Sidebar Icons + Tooltips + Topbar Subtab Bar)
 	-- ------------------------------------------------------------------------
+	windowCtx.SubtabScroll = 0
+	windowCtx.SubtabTargetScroll = 0
+	windowCtx.SubtabMaxScroll = 0
+	windowCtx.SubtabViewW = 466
+	windowCtx.SubtabBarIsOverflowing = false
+	windowCtx.SubtabScrollTabRef = nil
+	windowCtx.SubtabScrollFade = 0
+	windowCtx.SubtabLastScrollTime = 0
+	windowCtx.SidebarScroll = 0
+	windowCtx.SidebarTargetScroll = 0
+	windowCtx.SidebarMaxScroll = 0
+	windowCtx.SidebarIsOverflowing = false
+
+	local SUBTAB_GAP = 8
+	local SUBTAB_RIGHT_EDGE = 690
+	local SIDEBAR_ROW_H = 38
+	local SIDEBAR_VIEW_H = 412
+
+	local function ClampSubtabTarget()
+		windowCtx.SubtabTargetScroll = math.clamp(windowCtx.SubtabTargetScroll, 0, windowCtx.SubtabMaxScroll)
+	end
+
+	local function ClampSidebarTarget()
+		windowCtx.SidebarTargetScroll = math.clamp(windowCtx.SidebarTargetScroll, 0, windowCtx.SidebarMaxScroll)
+	end
+
+	function windowCtx:RevealSubtab(st, instant)
+		if not st or not self.SubtabBarIsOverflowing then
+			return
+		end
+		local pad = 30
+		local viewW = self.SubtabViewW
+		local left = (st.X or 0) - pad
+		local right = (st.X or 0) + st.Width + pad
+		local target = self.SubtabTargetScroll
+		if left < target then
+			target = left
+		elseif right > target + viewW then
+			target = right - viewW
+		end
+		self.SubtabTargetScroll = target
+		ClampSubtabTarget()
+		if instant then
+			self.SubtabScroll = self.SubtabTargetScroll
+		end
+		self.SubtabLastScrollTime = os.clock()
+	end
+
+	function windowCtx:RevealSidebarTab(t, instant)
+		if not t or not self.SidebarIsOverflowing then
+			return
+		end
+		local top = t.CenterY - 22
+		local bottom = t.CenterY + 22
+		local target = self.SidebarTargetScroll
+		if top < target then
+			target = top
+		elseif bottom > target + SIDEBAR_VIEW_H then
+			target = bottom - SIDEBAR_VIEW_H
+		end
+		self.SidebarTargetScroll = target
+		ClampSidebarTarget()
+		if instant then
+			self.SidebarScroll = self.SidebarTargetScroll
+		end
+	end
+
+	local function RecalcSidebarExtent()
+		local count = #windowCtx.Tabs
+		local contentH = (count > 0) and (18 + (count - 1) * SIDEBAR_ROW_H + 22) or 0
+		sidebarTabsTrack.Size = UDim2.fromOffset(62, math.max(SIDEBAR_VIEW_H, contentH))
+		windowCtx.SidebarMaxScroll = math.max(0, contentH - SIDEBAR_VIEW_H)
+		windowCtx.SidebarIsOverflowing = windowCtx.SidebarMaxScroll > 0
+		ClampSidebarTarget()
+	end
+
+	local function LayoutSubtabTrack(tab)
+		local x = 0
+		local n = #tab.SubTabs
+		for i, st in ipairs(tab.SubTabs) do
+			st.X = x
+			st.TopBtn.Position = UDim2.fromOffset(x, 0)
+			x += st.Width
+			if i < n then
+				x += SUBTAB_GAP
+			end
+		end
+		return x
+	end
+
 	local function RebuildTopbarForDisplayedTab()
 		local tab = windowCtx.Tabs[windowCtx.DisplayedTabIndex]
 		if not tab then
@@ -6801,14 +7452,35 @@ function Library:CreateWindow(config)
 		end
 		topTabIcon:SetIcon(tab.Icon)
 		topTabTitle.Text = tab.Name
-		local nameW = CalcTextBounds(tab.Name, FontBold, 14).X
+
+		local firstBarX = firstBar.Position.X.Offset
+		local nameW = math.min(140, CalcTextBounds(tab.Name, FontBold, 14).X)
+		topTabIcon.Instance.Position = UDim2.fromOffset(firstBarX + 17, 18)
+		topTabTitle.Position = UDim2.fromOffset(firstBarX + 37, 18)
 		topTabTitle.Size = UDim2.fromOffset(nameW + 6, 16)
 
-		local secBarX = 150 + nameW + 12
+		local secBarX = firstBarX + 37 + nameW + 12
 		secondBar.Position = UDim2.fromOffset(math.floor(secBarX + 0.5), 24)
 		secondBar.Visible = (#tab.SubTabs > 0)
 
-		subtabBarHolder.Position = UDim2.fromOffset(math.floor(secBarX + 24 + 0.5), 12)
+		local holderX = math.floor(secBarX + 24 + 0.5)
+		local holderW = math.max(80, SUBTAB_RIGHT_EDGE - holderX)
+		subtabBarHolder.Position = UDim2.fromOffset(holderX, 12)
+		subtabBarHolder.Size = UDim2.fromOffset(holderW, 30)
+
+		local contentW = LayoutSubtabTrack(tab)
+		subtabTrack.Size = UDim2.fromOffset(math.max(contentW, holderW), 30)
+		windowCtx.SubtabViewW = holderW
+		windowCtx.SubtabMaxScroll = math.max(0, contentW - holderW)
+		windowCtx.SubtabBarIsOverflowing = windowCtx.SubtabMaxScroll > 0
+		if windowCtx.SubtabScrollTabRef ~= tab then
+			windowCtx.SubtabScrollTabRef = tab
+			windowCtx.SubtabScroll = 0
+			windowCtx.SubtabTargetScroll = 0
+			windowCtx:RevealSubtab(tab.SubTabs[tab.ActiveSubIndex], true)
+		end
+		ClampSubtabTarget()
+		windowCtx.SubtabScroll = math.clamp(windowCtx.SubtabScroll, 0, windowCtx.SubtabMaxScroll)
 
 		-- Show subtab buttons belonging to displayed tab
 		for _, t in ipairs(windowCtx.Tabs) do
@@ -6836,11 +7508,12 @@ function Library:CreateWindow(config)
 
 	function windowCtx:AddTab(nameOrInfo, iconArg)
 		local tabName = type(nameOrInfo) == "table" and (nameOrInfo.Name or nameOrInfo.Title) or tostring(nameOrInfo or "Tab")
-		local tabIcon = type(nameOrInfo) == "table" and (nameOrInfo.Icon or iconArg) or (iconArg or "folder")
+		local rawTabIcon = type(nameOrInfo) == "table" and (nameOrInfo.Icon or iconArg) or iconArg
+		local tabIcon = ResolveSmartIcon(rawTabIcon, tabName, "uf045")
 		local tabIdx = #self.Tabs + 1
 
-		-- Sidebar hitbox: (12, 72 + (i-1)*38 - 15) in root -> (8, 53 + (i-1)*38) in canvas, 48x30
-		local centerY = 68 + (tabIdx - 1) * 38
+		-- Row center in sidebar track coords (track starts at canvas y=50, so row 1 = canvas y 68)
+		local centerY = 18 + (tabIdx - 1) * SIDEBAR_ROW_H
 		local hitBtn = Instance.new("TextButton")
 		hitBtn.Name = "SideTab_" .. tabName
 		hitBtn.Position = UDim2.fromOffset(8, centerY - 15)
@@ -6849,7 +7522,7 @@ function Library:CreateWindow(config)
 		hitBtn.AutoButtonColor = false
 		hitBtn.Text = ""
 		hitBtn.ZIndex = 7
-		hitBtn.Parent = sidebarHolder
+		hitBtn.Parent = sidebarTabsTrack
 
 		-- Left 2x12 accent bar at (18, 74 + (i-1)*38) in root -> (14, centerY - 6) in canvas
 		local accentBar = Instance.new("Frame")
@@ -6859,16 +7532,16 @@ function Library:CreateWindow(config)
 		accentBar.BackgroundTransparency = (tabIdx == 1) and 0 or 1
 		accentBar.BorderSizePixel = 0
 		accentBar.ZIndex = 8
-		accentBar.Parent = sidebarHolder
+		accentBar.Parent = sidebarTabsTrack
 		Instance.new("UICorner", accentBar).CornerRadius = UDim.new(0, 1)
 
-		local sIcon = Library:CreateIcon(sidebarHolder, tabIcon, 16, (tabIdx == 1) and Library.Theme.TextPrimary or Library.Theme.TextDim, 8)
+		local sIcon = Library:CreateIcon(sidebarTabsTrack, tabIcon, 16, (tabIdx == 1) and Library.Theme.TextPrimary or Library.Theme.TextDim, 8)
 		sIcon.Instance.Position = UDim2.fromOffset(23, centerY - 8)
 
 		-- Floating Hover Tooltip at (58, centerY - 12), height 25
 		local tipW = math.max(55, CalcTextBounds(tabName, FontMedium, 13).X + 18)
 		local tooltip = Instance.new("Frame")
-		tooltip.Position = UDim2.fromOffset(58, centerY - 8)
+		tooltip.Position = UDim2.fromOffset(58, 54 + centerY - 8)
 		tooltip.Size = UDim2.fromOffset(tipW, 25)
 		tooltip.BackgroundColor3 = Library.Theme.TooltipBg
 		tooltip.BackgroundTransparency = 1
@@ -6893,6 +7566,7 @@ function Library:CreateWindow(config)
 			Name = tabName,
 			Icon = tabIcon,
 			Index = tabIdx,
+			CenterY = centerY,
 			SubTabs = {},
 			ActiveSubIndex = 1,
 			DisplayedSubIndex = 1,
@@ -6914,6 +7588,7 @@ function Library:CreateWindow(config)
 				windowCtx:CloseFloatingPopups("all")
 				windowCtx.ActiveTabIndex = tabIdx
 			end
+			windowCtx:RevealSidebarTab(tabObj, false)
 		end)
 
 		local function EnsureDirectPage()
@@ -6926,7 +7601,8 @@ function Library:CreateWindow(config)
 
 		function tabObj:AddSubTab(subNameOrInfo, subIconArg)
 			local sName = type(subNameOrInfo) == "table" and (subNameOrInfo.Name or subNameOrInfo.Title) or tostring(subNameOrInfo or "SubTab")
-			local sIcon = type(subNameOrInfo) == "table" and (subNameOrInfo.Icon or subIconArg) or (subIconArg or "sliders")
+			local rawSubIcon = type(subNameOrInfo) == "table" and (subNameOrInfo.Icon or subIconArg) or subIconArg
+			local sIcon = ResolveSmartIcon(rawSubIcon, sName, "uf407")
 			local sIdx = #self.SubTabs + 1
 
 			-- Calculate horizontal X offset in subtabBarHolder
@@ -6947,7 +7623,7 @@ function Library:CreateWindow(config)
 			topBtn.Text = ""
 			topBtn.Visible = (windowCtx.DisplayedTabIndex == self.Index)
 			topBtn.ZIndex = 7
-			topBtn.Parent = subtabBarHolder
+			topBtn.Parent = subtabTrack
 
 			local stIcon = Library:CreateIcon(topBtn, sIcon, 15, (sIdx == 1) and Library.Theme.Accent or Library.Theme.TextDim, 8)
 			stIcon.Instance.Position = UDim2.fromOffset(4, 6)
@@ -6970,6 +7646,7 @@ function Library:CreateWindow(config)
 				Name = sName,
 				Icon = sIcon,
 				Index = sIdx,
+				X = xCursor,
 				Width = btnW,
 				TopBtn = topBtn,
 				IconApi = stIcon,
@@ -6983,10 +7660,14 @@ function Library:CreateWindow(config)
 			topBtn.MouseEnter:Connect(function() subObj.Hovered = true end)
 			topBtn.MouseLeave:Connect(function() subObj.Hovered = false end)
 			topBtn.MouseButton1Click:Connect(function()
+				if windowCtx.SubtabDragMoved then
+					return
+				end
 				if tabObj.ActiveSubIndex ~= sIdx then
 					windowCtx:CloseFloatingPopups("all")
 					tabObj.ActiveSubIndex = sIdx
 				end
+				windowCtx:RevealSubtab(subObj, false)
 			end)
 
 			function subObj:AddLeftGroupbox(t, ic)
@@ -7034,6 +7715,7 @@ function Library:CreateWindow(config)
 		end
 
 		table.insert(self.Tabs, tabObj)
+		RecalcSidebarExtent()
 		if tabIdx == 1 then
 			RebuildTopbarForDisplayedTab()
 		end
@@ -7042,6 +7724,110 @@ function Library:CreateWindow(config)
 
 	local windowFadeTracker = { Active = false, Cache = {} }
 	local lastBrandAccentHex = ""
+
+	-- ------------------------------------------------------------------------
+	-- Subtab Bar + Sidebar Scroll Input (mouse wheel, drag / touch swipe, edge arrows)
+	-- ------------------------------------------------------------------------
+	local function PointInGui(guiObj, pos)
+		if not guiObj or not guiObj.Visible then
+			return false
+		end
+		local p = guiObj.AbsolutePosition
+		local s = guiObj.AbsoluteSize
+		return pos.X >= p.X and pos.X <= p.X + s.X and pos.Y >= p.Y and pos.Y <= p.Y + s.Y
+	end
+
+	local function NudgeSubtabs(delta)
+		if not windowCtx.SubtabBarIsOverflowing then
+			return
+		end
+		windowCtx.SubtabTargetScroll += delta
+		ClampSubtabTarget()
+		windowCtx.SubtabLastScrollTime = os.clock()
+	end
+
+	subLeftCap.MouseButton1Click:Connect(function()
+		NudgeSubtabs(-math.max(90, windowCtx.SubtabViewW * 0.6))
+	end)
+	subRightCap.MouseButton1Click:Connect(function()
+		NudgeSubtabs(math.max(90, windowCtx.SubtabViewW * 0.6))
+	end)
+
+	Library:GiveSignal(UserInputService.InputChanged:Connect(function(inp)
+		if inp.UserInputType ~= Enum.UserInputType.MouseWheel then
+			return
+		end
+		if not Library.Toggled or not root.Visible then
+			return
+		end
+		local mp = UserInputService:GetMouseLocation() - game:GetService("GuiService"):GetGuiInset()
+		local wheel = inp.Position.Z
+		if windowCtx.SubtabBarIsOverflowing and PointInGui(subtabBarHolder, mp) then
+			NudgeSubtabs(-wheel * 70)
+		elseif windowCtx.SidebarIsOverflowing and PointInGui(sidebarTabsClip, mp) then
+			windowCtx.SidebarTargetScroll += -wheel * SIDEBAR_ROW_H * 1.5
+			ClampSidebarTarget()
+		end
+	end))
+
+	-- Drag / swipe scrolling (cancels the click if the pointer moved more than 5px)
+	windowCtx.SubtabDragMoved = false
+	local dragState = nil
+	Library:GiveSignal(UserInputService.InputBegan:Connect(function(inp)
+		if inp.UserInputType ~= Enum.UserInputType.MouseButton1 and inp.UserInputType ~= Enum.UserInputType.Touch then
+			return
+		end
+		if not Library.Toggled or not root.Visible then
+			return
+		end
+		local mp = Vector2.new(inp.Position.X, inp.Position.Y)
+		windowCtx.SubtabDragMoved = false
+		if windowCtx.SubtabBarIsOverflowing and PointInGui(subtabBarHolder, mp)
+			and not PointInGui(subLeftCap, mp) and not PointInGui(subRightCap, mp) then
+			dragState = { Kind = "sub", Start = mp, Origin = windowCtx.SubtabTargetScroll }
+		elseif windowCtx.SidebarIsOverflowing and PointInGui(sidebarTabsClip, mp) then
+			dragState = { Kind = "side", Start = mp, Origin = windowCtx.SidebarTargetScroll }
+		else
+			dragState = nil
+		end
+	end))
+	Library:GiveSignal(UserInputService.InputChanged:Connect(function(inp)
+		if not dragState then
+			return
+		end
+		if inp.UserInputType ~= Enum.UserInputType.MouseMovement and inp.UserInputType ~= Enum.UserInputType.Touch then
+			return
+		end
+		local mp = Vector2.new(inp.Position.X, inp.Position.Y)
+		local scale = math.max(0.25, uiScale.Scale)
+		if dragState.Kind == "sub" then
+			local dx = (mp.X - dragState.Start.X) / scale
+			if math.abs(dx) > 5 then
+				windowCtx.SubtabDragMoved = true
+			end
+			if windowCtx.SubtabDragMoved then
+				windowCtx.SubtabTargetScroll = dragState.Origin - dx
+				ClampSubtabTarget()
+				windowCtx.SubtabScroll = windowCtx.SubtabTargetScroll
+				windowCtx.SubtabLastScrollTime = os.clock()
+			end
+		else
+			local dy = (mp.Y - dragState.Start.Y) / scale
+			if math.abs(dy) > 5 then
+				windowCtx.SubtabDragMoved = true
+			end
+			if windowCtx.SubtabDragMoved then
+				windowCtx.SidebarTargetScroll = dragState.Origin - dy
+				ClampSidebarTarget()
+				windowCtx.SidebarScroll = windowCtx.SidebarTargetScroll
+			end
+		end
+	end))
+	Library:GiveSignal(UserInputService.InputEnded:Connect(function(inp)
+		if inp.UserInputType == Enum.UserInputType.MouseButton1 or inp.UserInputType == Enum.UserInputType.Touch then
+			dragState = nil
+		end
+	end))
 
 	-- Optional Mobile Floating Toggle Pill (for touch-only executors without hardware keyboard)
 	if (UserInputService.TouchEnabled and not UserInputService.KeyboardEnabled) or config.ShowMobileToggle == true then
@@ -7175,8 +7961,16 @@ function Library:CreateWindow(config)
 				EscapeRichText(titleAccentStr)
 			)
 		end
-		local liveBrandW = brandRich.AbsoluteSize.X > 4 and (brandRich.AbsoluteSize.X / math.max(0.25, uiScale.Scale)) or approxBrandW
-		brandLogo.Instance.Position = UDim2.fromOffset(math.max(12, math.floor(105 - liveBrandW - 22 + 0.5)), 18)
+		local liveBrandW = brandRich.TextBounds.X > 4 and math.min(156, brandRich.TextBounds.X) or approxBrandW
+		local liveLogoX = (liveBrandW <= 65) and math.max(16, math.floor(105 - liveBrandW - 22 + 0.5)) or 16
+		brandLogo.Instance.Position = UDim2.fromOffset(liveLogoX, 18)
+		brandRich.Position = UDim2.fromOffset(liveLogoX + 22, 18)
+		brandRich.Size = UDim2.fromOffset(math.min(156, math.ceil(liveBrandW) + 4), 16)
+		local liveFirstBarX = math.max(113, math.floor(liveLogoX + 22 + liveBrandW + 10 + 0.5))
+		if firstBar.Position.X.Offset ~= liveFirstBarX then
+			firstBar.Position = UDim2.fromOffset(liveFirstBarX, 24)
+			RebuildTopbarForDisplayedTab()
+		end
 
 		pfpFrame.BackgroundColor3 = (Library.ThemeName == "Light") and Color3.fromRGB(222, 222, 228) or Color3.fromRGB(28, 28, 34)
 		pfpStroke.Color = (Library.ThemeName == "Light") and th.GroupStrokeInner or Color3.fromRGB(48, 48, 56)
@@ -7262,6 +8056,7 @@ function Library:CreateWindow(config)
 
 			t.Tooltip.Visible = tipMix > 0.01
 			if t.Tooltip.Visible then
+				t.Tooltip.Position = UDim2.fromOffset(58, math.floor(54 + t.CenterY - 8 - windowCtx.SidebarScroll + 0.5))
 				t.Tooltip.BackgroundColor3 = th.TooltipBg
 				t.Tooltip.BackgroundTransparency = 1 - tipMix
 				t.TooltipLabel.TextColor3 = th.TooltipText
@@ -7284,6 +8079,57 @@ function Library:CreateWindow(config)
 				st.Label.TextColor3 = LerpColor(idleCol, th.TextPrimary, am)
 				st.Label.TextTransparency = 1 - subBarAlpha
 			end
+		end
+
+		-- Apply Smooth Scrolling for Subtab Bar & Sidebar
+		if windowCtx.SubtabBarIsOverflowing then
+			windowCtx.SubtabScroll += (windowCtx.SubtabTargetScroll - windowCtx.SubtabScroll) * math.min(1, dt * 14.0)
+			if math.abs(windowCtx.SubtabTargetScroll - windowCtx.SubtabScroll) < 0.25 then
+				windowCtx.SubtabScroll = windowCtx.SubtabTargetScroll
+			end
+			subtabTrack.Position = UDim2.fromOffset(-math.floor(windowCtx.SubtabScroll + 0.5), 0)
+
+			local canScrollLeft = windowCtx.SubtabScroll > 2
+			local canScrollRight = windowCtx.SubtabScroll < (windowCtx.SubtabMaxScroll - 2)
+			subLeftCap.Visible = canScrollLeft
+			subRightCap.Visible = canScrollRight
+			subLeftCap.BackgroundColor3 = th.Canvas
+			subRightCap.BackgroundColor3 = th.Canvas
+			subLeftIcon:SetColor(th.TextDim)
+			subRightIcon:SetColor(th.TextDim)
+
+			local isRecentScroll = (os.clock() - windowCtx.SubtabLastScrollTime) < 1.4
+			local targetRailFade = isRecentScroll and 1 or 0
+			windowCtx.SubtabScrollFade += (targetRailFade - windowCtx.SubtabScrollFade) * math.min(1, dt * 8.0)
+			local railAlpha = SmoothStep(windowCtx.SubtabScrollFade)
+			subScrollRail.Visible = railAlpha > 0.01
+			if subScrollRail.Visible then
+				local railW = subScrollRail.AbsoluteSize.X
+				local thumbW = math.clamp(math.floor(railW * (windowCtx.SubtabViewW / math.max(1, windowCtx.SubtabViewW + windowCtx.SubtabMaxScroll))), 20, railW)
+				local thumbMaxX = math.max(0, railW - thumbW)
+				local thumbX = (windowCtx.SubtabMaxScroll > 0) and math.floor(thumbMaxX * (windowCtx.SubtabScroll / windowCtx.SubtabMaxScroll) + 0.5) or 0
+				subScrollRail.BackgroundColor3 = th.ControlBg
+				subScrollRail.BackgroundTransparency = 1 - (0.5 * railAlpha)
+				subScrollThumb.Size = UDim2.fromOffset(thumbW, 2)
+				subScrollThumb.Position = UDim2.fromOffset(thumbX, 0)
+				subScrollThumb.BackgroundColor3 = th.Accent
+				subScrollThumb.BackgroundTransparency = 1 - railAlpha
+			end
+		else
+			subtabTrack.Position = UDim2.fromOffset(0, 0)
+			subLeftCap.Visible = false
+			subRightCap.Visible = false
+			subScrollRail.Visible = false
+		end
+
+		if windowCtx.SidebarIsOverflowing then
+			windowCtx.SidebarScroll += (windowCtx.SidebarTargetScroll - windowCtx.SidebarScroll) * math.min(1, dt * 14.0)
+			if math.abs(windowCtx.SidebarTargetScroll - windowCtx.SidebarScroll) < 0.25 then
+				windowCtx.SidebarScroll = windowCtx.SidebarTargetScroll
+			end
+			sidebarTabsTrack.Position = UDim2.fromOffset(0, -math.floor(windowCtx.SidebarScroll + 0.5))
+		else
+			sidebarTabsTrack.Position = UDim2.fromOffset(0, 0)
 		end
 
 		-- Step Floating Popups
