@@ -4165,11 +4165,6 @@ AttachWidgetFactory = function(target, windowCtx)
 
 		hitBtn.MouseEnter:Connect(function() rowHovered = true end)
 		hitBtn.MouseLeave:Connect(function() rowHovered = false end)
-		track.InputBegan:Connect(function(inp)
-			if inp.UserInputType == Enum.UserInputType.MouseButton1 then
-				toggleObj:SetValue(not toggleObj.Value)
-			end
-		end)
 		hitBtn.MouseButton1Click:Connect(function()
 			toggleObj:SetValue(not toggleObj.Value)
 		end)
