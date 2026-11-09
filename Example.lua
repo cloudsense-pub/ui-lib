@@ -725,6 +725,25 @@ do
 		end,
 	})
 
+	GeneralGroup:AddInput("Set_WatermarkName", {
+		Text = "Watermark Name",
+		Default = Library.WatermarkName,
+		Placeholder = "Enter a name...",
+		Finished = true,
+		Callback = function(value)
+			Library:SetWatermarkName(value)
+		end,
+	})
+
+	GeneralGroup:AddToggle("Set_WatermarkIcon", {
+		Text = "Watermark Star Icon",
+		Default = true,
+		Tooltip = "Show or hide the icon beside the watermark name",
+		Callback = function(val)
+			Library:SetWatermarkIconVisibility(val)
+		end,
+	})
+
 	GeneralGroup:AddToggle("Set_KeybindList", {
 		Text = "Show Keybind List",
 		Default = true,
@@ -812,7 +831,7 @@ Library:GiveSignal(RunService.RenderStepped:Connect(function()
 		local lp = Players.LocalPlayer
 		local uname = (lp and lp.Name) or "Guest"
 		Library:SetWatermark(string.format(
-			"ech0.fun | %s | %d fps | %d ms | %s",
+			"%s | %d fps | %d ms | %s",
 			uname,
 			CurrentFPS,
 			pingMs,

@@ -894,7 +894,9 @@ local Library = {
 	CurrentRainbowColor = Color3.fromHSV(0, 0.78, 1),
 	IconAtlasId = CustomLocalAtlasAsset,
 	WatermarkEnabled = false,
-	WatermarkText = "ech0.fun | 60 fps | 42 ms",
+	WatermarkName = "ech0.fun",
+	WatermarkIconEnabled = true,
+	WatermarkText = "60 fps | 42 ms",
 	KeybindListEnabled = false,
 }
 
@@ -1664,7 +1666,7 @@ Library:GiveSignal(RunService.RenderStepped:Connect(function(dt)
 end))
 
 -- ============================================================================
--- WATERMARK WIDGET (1:1 ech0.fun triple-shell + X-star logo + 1x8 dividers)
+-- WATERMARK WIDGET (configurable name and icon + telemetry segments)
 -- ============================================================================
 do
 	local wmOuter1 = Instance.new("Frame")
@@ -1737,11 +1739,11 @@ do
 	wmBrandRich.Size = UDim2.fromOffset(0, 30)
 	wmBrandRich.FontFace = FontBold
 	wmBrandRich.TextSize = 13
-	wmBrandRich.RichText = true
+	wmBrandRich.RichText = false
 	wmBrandRich.TextXAlignment = Enum.TextXAlignment.Left
 	wmBrandRich.TextColor3 = Library.Theme.TextPrimary
 	wmBrandRich.TextTransparency = 1
-	wmBrandRich.Text = 'ech0.<font color="#8e86f6">fun</font>'
+	wmBrandRich.Text = Library.WatermarkName
 	wmBrandRich.LayoutOrder = 2
 	wmBrandRich.ZIndex = 504
 	wmBrandRich.Parent = wmRow
@@ -1753,12 +1755,12 @@ do
 
 	local function RebuildWatermarkSegments(rawText, alpha)
 		local th = Library.Theme
-		wmBrandRich.Text = string.format('ech0.<font color="#%s">fun</font>', th.Accent:ToHex())
+		wmBrandRich.Text = Library.WatermarkName
 
 		local parts = {}
 		for part in string.gmatch(tostring(rawText or ""), "([^|]+)") do
 			local trimmed = string.gsub(part, "^%s*(.-)%s*$", "%1")
-			if trimmed ~= "" and string.lower(trimmed) ~= "ech0.fun" then
+			if trimmed ~= "" and string.lower(trimmed) ~= string.lower(Library.WatermarkName) then
 				table.insert(parts, trimmed)
 			end
 		end
@@ -1821,6 +1823,19 @@ do
 		end
 	end
 
+	function Library:SetWatermarkName(name)
+		self.WatermarkName = tostring(name or "")
+		wmBrandRich.Text = self.WatermarkName
+		if wmFade > 0.005 then
+			RebuildWatermarkSegments(self.WatermarkText, SmoothStep(wmFade))
+		end
+	end
+
+	function Library:SetWatermarkIconVisibility(visible)
+		self.WatermarkIconEnabled = (visible == true)
+		wmLogo.Instance.Visible = self.WatermarkIconEnabled
+	end
+
 	Library:BindStep(function(dt)
 		local target = Library.WatermarkEnabled and 1 or 0
 		wmFade += (target - wmFade) * math.min(1, dt * 10)
@@ -1845,6 +1860,7 @@ do
 		wmTopAccent.BackgroundTransparency = 1 - a
 		wmLogo:SetColor(th.Accent)
 		wmLogo:SetTransparency(1 - a)
+		wmLogo.Instance.Visible = Library.WatermarkIconEnabled
 		wmBrandRich.TextColor3 = th.TextPrimary
 		wmBrandRich.TextTransparency = 1 - a
 		RebuildWatermarkSegments(Library.WatermarkText, a)
