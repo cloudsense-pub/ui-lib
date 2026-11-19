@@ -4142,6 +4142,19 @@ AttachWidgetFactory = function(target, windowCtx)
 		knob.Parent = track
 		Instance.new("UICorner", knob).CornerRadius = UDim.new(1, 0)
 
+		-- Dedicated click target for the toggle box switch pill so clicking it directly always works,
+		-- even when accessories (gear cog, color pickers) are positioned next to it.
+		local trackBtn = Instance.new("TextButton")
+		trackBtn.Name = "TrackHitBtn"
+		trackBtn.BackgroundTransparency = 1
+		trackBtn.AnchorPoint = Vector2.new(1, 0.5)
+		trackBtn.Position = UDim2.new(1, -padX, 0.5, 0)
+		trackBtn.Size = UDim2.fromOffset(29, 25)
+		trackBtn.Text = ""
+		trackBtn.AutoButtonColor = false
+		trackBtn.ZIndex = baseZ + 4
+		trackBtn.Parent = row
+
 		local rightAccessoryX = padX + 34
 		local swatches = {}
 		local gearBtn = nil
@@ -4161,7 +4174,7 @@ AttachWidgetFactory = function(target, windowCtx)
 			end
 			rightAccessoryX = curRight
 			label.Size = UDim2.new(1, -(padX + rightAccessoryX + 4), 1, 0)
-			hitBtn.Size = UDim2.new(1, -(padX + (curRight - 34)), 1, 0)
+			hitBtn.Size = UDim2.new(1, -(padX + rightAccessoryX + 4), 1, 0)
 		end
 
 		local toggleObj = {
@@ -4177,11 +4190,35 @@ AttachWidgetFactory = function(target, windowCtx)
 
 		local animT = toggleObj.Value and 1 or 0
 		local hoverT = 0
+		local labelHovered = false
+		local trackHovered = false
 		local rowHovered = false
 
-		hitBtn.MouseEnter:Connect(function() rowHovered = true end)
-		hitBtn.MouseLeave:Connect(function() rowHovered = false end)
+		local function UpdateHover()
+			rowHovered = labelHovered or trackHovered
+		end
+
+		hitBtn.MouseEnter:Connect(function()
+			labelHovered = true
+			UpdateHover()
+		end)
+		hitBtn.MouseLeave:Connect(function()
+			labelHovered = false
+			UpdateHover()
+		end)
 		hitBtn.MouseButton1Click:Connect(function()
+			toggleObj:SetValue(not toggleObj.Value)
+		end)
+
+		trackBtn.MouseEnter:Connect(function()
+			trackHovered = true
+			UpdateHover()
+		end)
+		trackBtn.MouseLeave:Connect(function()
+			trackHovered = false
+			UpdateHover()
+		end)
+		trackBtn.MouseButton1Click:Connect(function()
 			toggleObj:SetValue(not toggleObj.Value)
 		end)
 
@@ -4295,6 +4332,9 @@ AttachWidgetFactory = function(target, windowCtx)
 
 		function toggleObj:AddTooltip(tipStr)
 			Library:AddTooltip(hitBtn, tipStr)
+			if trackBtn then
+				Library:AddTooltip(trackBtn, tipStr)
+			end
 			return self
 		end
 		if type(info.Tooltip) == "string" and info.Tooltip ~= "" then
